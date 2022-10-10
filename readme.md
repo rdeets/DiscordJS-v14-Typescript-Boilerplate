@@ -10,6 +10,9 @@ Typesafe Multi-guild Bot for DiscordJS V14
     <a style="font-size:15px;font-family:verdana"><b>Language:</b></a><br>
     <img src="https://img.shields.io/badge/Typescript-100000?label=Made%20with:&style=flat&logo=typescript&color=blue">
     <br>
+    <a style="font-size:15px;font-family:verdana"><b>Size:</b></a><br>
+     <img src="https://img.shields.io/github/languages/code-size/rdeets/DiscordJS-v14-Typescript-Boilerplate">
+     <br>
 </p>
 
 # DiscordJS V14 Bot
