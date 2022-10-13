@@ -51,7 +51,7 @@ export class ExtendedClient extends Client {
 		let loggedIn = '';
 		while (!loggedIn) {
 			try {
-				loggedIn = await this.login(process.env.BOT_TOKEN);
+				loggedIn = await this.login(process.env.BOT_TOKEN!);
 			} catch (error) {
 				console.log('Failed to login. Trying again in 5 seconds');
 				await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -71,9 +71,9 @@ export class ExtendedClient extends Client {
 		let connected = false;
 		while (!connected) {
 			try {
-				await Mongoose.connect(process.env.MONGO_TOKEN, {
+				await Mongoose.connect(process.env.MONGO_TOKEN!, {
 					keepAlive: true,
-					dbName: process.env.DATABASE_NAME
+					dbName: process.env.DATABASE_NAME!
 				});
 				connected = true;
 			} catch (error) {
@@ -152,7 +152,7 @@ export class ExtendedClient extends Client {
 				this.registerSelectMenus()
 			]);
 
-			this.user?.setActivity(process.env.ACTIVITY);
+			this.user?.setActivity({name: process.env.ACTIVITY!})
 		});
 
 		// Events

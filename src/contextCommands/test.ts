@@ -6,7 +6,7 @@ module.exports = {
 	data: new ContextMenuCommandBuilder()
 		.setName('test')
 		.setType(ApplicationCommandType.User),
-	run: async ({ client, interaction }) => {
+	run: async ({ interaction }) => {
 		return await interaction.channel?.send(interaction.targetId);
 	}
 } as ContextMenuType;

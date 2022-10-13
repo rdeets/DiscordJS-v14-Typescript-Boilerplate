@@ -17,7 +17,7 @@ module.exports = {
 				.setValue('value 2')
 		]),
 
-	run: async ({ client, interaction }) => {
+	run: async ({ interaction }) => {
 		await interaction.reply({
 			content: interaction.values.join(),
 			ephemeral: true

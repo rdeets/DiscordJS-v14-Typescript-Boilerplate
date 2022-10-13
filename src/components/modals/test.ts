@@ -19,7 +19,7 @@ module.exports = {
 					.setStyle(TextInputStyle.Short)
 			)
 		),
-	run: async ({ client, interaction }) => {
+	run: async ({ interaction }) => {
 		return await interaction.followUp(
 			interaction.fields.getTextInputValue('test-modal-text-input-id')
 		);

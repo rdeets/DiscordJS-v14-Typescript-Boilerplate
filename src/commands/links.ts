@@ -37,7 +37,7 @@ module.exports = {
 							await Guild.findById(interaction.guildId)
 						)?.links?.replaceAll('--', '\n');
 						if (links)
-							return await Promise.all([
+							return await Promise.all<any>([
 								interaction.deleteReply(),
 								interaction.channel.send({
 									embeds: [
