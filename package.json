@@ -1,5 +1,5 @@
 {
-    "name": "typescript-bot",
+    "name": "discordjs-v14-typescript-boilerplate",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
@@ -10,9 +10,9 @@
         "watch": "tsc -w"
     },
     "keywords": [],
-    "author": "",
+    "author": "Ryan Deets",
     "license": "ISC",
-    "description": "",
+    "description": "TS DiscordJS V14 Boilerplate",
     "dependencies": {
         "discord.js": "^14.3.0",
         "dotenv": "^10.0.0",

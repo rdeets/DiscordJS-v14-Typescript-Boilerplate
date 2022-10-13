@@ -2,10 +2,10 @@ Typesafe Multi-guild Bot for DiscordJS V14
 
 <p align="center">
     <a style="font-size:15px;font-family:verdana"><b>Statistics/Info:</b></a><br>
-    <img src="https://img.shields.io/github/forks/Da4ndo/Better-DiscordJS-V14-Bot-Template?label=Forks&color=lime&logo=githubactions&logoColor=lime">
-    <img src="https://img.shields.io/github/stars/Da4ndo/Better-DiscordJS-V14-Bot-Template?label=Stars&color=yellow&logo=reverbnation&logoColor=yellow">
-    <img src="https://img.shields.io/github/license/Da4ndo/Better-DiscordJS-V14-Bot-Template?label=License&color=808080&logo=gitbook&logoColor=808080">
-    <img src="https://img.shields.io/github/issues/Da4ndo/Better-DiscordJS-V14-Bot-Template?label=Issues&color=red&logo=ifixit&logoColor=red">
+    <img src="https://img.shields.io/github/forks/rdeets/DiscordJS-v14-Typescript-Boilerplate?label=Forks&color=lime&logo=githubactions&logoColor=lime">
+    <img src="https://img.shields.io/github/stars/rdeets/DiscordJS-v14-Typescript-Boilerplate?label=Stars&color=yellow&logo=reverbnation&logoColor=yellow">
+    <img src="https://img.shields.io/github/license/rdeets/DiscordJS-v14-Typescript-Boilerplate?label=License&color=808080&logo=gitbook&logoColor=808080">
+    <img src="https://img.shields.io/github/issues/rdeets/DiscordJS-v14-Typescript-Boilerplate?label=Issues&color=red&logo=ifixit&logoColor=red">
     <br>
     <a style="font-size:15px;font-family:verdana"><b>Language:</b></a><br>
     <img src="https://img.shields.io/badge/Typescript-100000?label=Made%20with:&style=flat&logo=typescript&color=blue">
