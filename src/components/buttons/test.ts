@@ -8,6 +8,7 @@ module.exports = {
 		.setStyle(ButtonStyle.Success)
 		.setLabel('label'),
 	run: async ({ client, interaction }) => {
-		return await interaction.showModal(client.modals.get('test-modal-id').modal);
+		const modal = client.modals.get('test-modal-id');
+		if (modal) return await interaction.showModal(modal.modal);
 	}
 } as ButtonType;

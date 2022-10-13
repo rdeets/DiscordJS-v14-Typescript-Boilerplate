@@ -32,40 +32,42 @@ module.exports = {
 		if (interaction.isChatInputCommand()) {
 			switch (interaction.options.getSubcommand()) {
 				case 'post': {
-					if (interaction.channel.isTextBased()) {
-						Promise.all([
-							interaction.deleteReply(),
-							interaction.channel.send({
-								embeds: [
-									new EmbedBuilder()
-										.setColor(0x00ffff)
-										.setTitle('LINKS')
-										.setDescription(
-											(
-												await Guild.findById(interaction.guildId)
-											).links.replaceAll('--', '\n')
-										)
-								]
-							})
-						]);
+					if (interaction.channel?.isTextBased()) {
+						const links = (
+							await Guild.findById(interaction.guildId)
+						)?.links?.replaceAll('--', '\n');
+						if (links)
+							return await Promise.all([
+								interaction.deleteReply(),
+								interaction.channel.send({
+									embeds: [
+										new EmbedBuilder()
+											.setColor(0x00ffff)
+											.setTitle('LINKS')
+											.setDescription(links)
+									]
+								})
+							]);
+						else return await interaction.followUp('Error fetching links');
 					}
 					break;
 				}
 
 				case 'set-copy': {
-					const copy = args.getString('copy');
+					const copy = args.getString('copy')?.replaceAll('--', '\n');
 					await Guild.findByIdAndUpdate(
 						interaction.guildId,
 						{ links: copy },
 						{ upsert: true }
 					);
-					await interaction.followUp({
-						embeds: [
-							new EmbedBuilder()
-								.setTitle('Links')
-								.setDescription(copy.replaceAll('--', '\n'))
-						]
-					});
+					if (copy)
+						await interaction.followUp({
+							content: 'New links set: ',
+							embeds: [
+								new EmbedBuilder().setTitle('Links').setDescription(copy)
+							]
+						});
+					else return await interaction.followUp('Error setting links');
 					break;
 				}
 			}

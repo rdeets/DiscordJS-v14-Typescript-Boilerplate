@@ -1,10 +1,10 @@
 declare global {
 	namespace NodeJS {
 		interface ProcessEnv {
-			botToken: string;
-			MongoConnectionString: string;
-			databaseName: string;
-			activity: string;
+			BOT_TOKEN: string;
+			MONGO_TOKEN: string;
+			DATABASE_NAME: string;
+			ACTIVITY: string;
 			environment: 'dev' | 'prod' | 'debug';
 		}
 	}

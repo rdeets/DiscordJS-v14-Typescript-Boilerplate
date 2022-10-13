@@ -1,6 +1,4 @@
-import {
-	SlashCommandBuilder,
-} from 'discord.js';
+import { SlashCommandBuilder } from 'discord.js';
 import Guild from '../schemas/Guild';
 import { CommandType } from '../typings/Command';
 
@@ -15,11 +13,9 @@ module.exports = {
 				.setRequired(true)
 		),
 	async run({ interaction, args }) {
-		if (interaction.isChatInputCommand()) {
-			await Guild.findByIdAndUpdate(interaction.guildId, {
-				allowSwears: args.getBoolean('swears')
-			});
-			return await interaction.followUp('swear settings set');
-		}
+		await Guild.findByIdAndUpdate(interaction.guildId, {
+			allowSwears: args.getBoolean('swears')
+		});
+		return await interaction.followUp('swear settings set');
 	}
 } as CommandType;
